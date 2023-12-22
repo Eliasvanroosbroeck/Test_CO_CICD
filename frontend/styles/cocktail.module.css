@@ -1,0 +1,122 @@
+ .bg{
+   background-image: url(../public/bg_vertical.jpg);
+   background-color: rgba(255,255,255,0);
+   background-Size: cover, auto;
+   background-repeat: no-repeat;
+ }
+
+ .first{
+    border-Top-Color: rgb(255,255,255);
+    border-Right-Color: rgb(255,255,255);
+    border-Bottom-Color:rgb(255,255,255);
+    border-Color: rgba(255,255,255,0);
+    margin-Top: 120px;
+    background: rgba(255,255,255,0);
+ }
+
+ .second{
+    background: #f3d9bb;
+    opacity: 0.71;
+    border-Top-Left-Radius: 10px;
+    border-Top-Right-Radius: 10px;
+    border-Bottom-Right-Radius: 10px;
+    border-Bottom-Left-Radius: 10px;
+    margin-Top: 50px;
+    border: 2px solid rgb(0,0,0);
+    border-Top-Color: rgba(0,0,0,0);
+    border-Right-Color: rgba(0,0,0,0.4);
+    border-Bottom-Color: rgb(0,0,0);
+    border-Left-Color: rgba(0,0,0,0.4);
+    box-Shadow: 0px 0px 20px 20px rgba(0,0,0,0.45);
+ }
+
+ .third {
+    border-Top-Width: 2px;
+    border-Top-Color: rgb(0,0,0)
+ }
+
+ .fourth {
+    border-Top-Left-Radius: 10px;
+    border-Top-Right-Radius: 10px;
+    color: rgb(255,250,250);
+ }
+
+ .fifth{
+    background: rgba(0,0,0,0);
+    margin: 10px;
+ }
+
+ .h1style{
+   color: rgb(0,0,0);
+   text-Align: left;
+ }
+
+ .button {
+    width: 100%;
+    background: #995905;
+    border-Radius: 5px;
+    margin-Bottom: 5px;
+    border-Color: var(--bs-btn-disabled-color);
+ }
+
+ .tablefirst{
+    border-Radius: 10px;
+    border: 1px solid rgba(0,0,0,0.41);
+    border-Top-Width: 2px;
+    border-Right: 2px solid rgba(0,0,0,0.4);
+    border-Bottom-Width: 2px;
+    border-Left-Width: 2px;
+    background: rgba(255,108,1,0.22);
+    margin-Bottom: 5px;
+
+ }
+
+ .tablesecond{
+    border-Radius: 2px;
+    background: rgba(255,107,0,0);
+    border-Right: 4px solid rgb(255,255,255);
+    border-Bottom-Width: 3px;
+ }
+
+ .tableH1{
+    width: 220px;
+    color: rgb(0,0,0);
+    margin-Bottom: 35px;
+    overflow: visible;
+ }
+
+ .tablebutton1{
+    background: #e28c05;
+    width: 95%;
+    margin-Bottom: 5px;
+    overflow: visible;
+    display: block;
+    border-Style: solid;
+    border-Color: var(--bs-btn-disabled-color)
+ }
+
+ .tablebutton2{
+    width: 95%;
+    margin-Bottom: 5px;
+    display: block;
+    background: #c75400;
+    border-Color:var(--bs-btn-disabled-color);
+ }
+
+ .tablep1{
+    color: rgb(0,0,0);
+ }
+
+ .tablethird{
+    border-Width: 3px;
+    border-Color: rgb(0,0,0);
+    background: rgba(255,255,255,0);
+
+ }
+
+ .tablep2{
+    position: static;
+    display: grid;
+    text-Align: left;
+    color: rgb(0,0,0);
+ }
