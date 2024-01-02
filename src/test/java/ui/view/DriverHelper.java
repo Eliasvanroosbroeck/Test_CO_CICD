@@ -8,9 +8,9 @@ public class DriverHelper {
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
-        WebDriverManager.firefoxdriver().setup();
-        FirefoxDriver driver;
-        driver = new FirefoxDriver();
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver;
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
     }
