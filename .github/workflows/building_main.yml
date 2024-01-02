@@ -2,9 +2,9 @@ name: Java CI with Maven and Testing
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml -D maven.test.skip=true
+      run: mvn -B package --file pom.xml
 
     - name: Upload build artifacts       
       uses: actions/upload-artifact@v3      
@@ -41,6 +41,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+        
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
 
     - name: Run Tests
       run: mvn test
