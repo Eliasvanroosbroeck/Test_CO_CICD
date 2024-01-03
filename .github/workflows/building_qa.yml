@@ -43,9 +43,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./path/to/Dockerfile
+          file: .  # Corrected path to Dockerfile
           push: true
-          tags: eliasvr/co_qa:latest  # Set your repository name here
+          tags: your-username/your-repo:latest  # Set your repository name here
 
   test:
     needs: build
