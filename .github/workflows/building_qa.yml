@@ -33,11 +33,13 @@ jobs:
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Build Docker Image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/co_qa:latest .
+
       - name: Tag and Push Docker Image
         run: |
-          docker tag co_qa:latest ${{ secrets.DOCKER_USERNAME }}/co_qa:latest
+          docker tag ${{ secrets.DOCKER_USERNAME }}/co_qa:latest ${{ secrets.DOCKER_USERNAME }}/co_qa:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/co_qa:latest
-
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
