@@ -30,14 +30,22 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-         username: ${{ secrets.DOCKER_USERNAME }}
-         password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Animal-1.0.war
           path: /home/runner/work/ci-cd-demo/ci-cd-demo/target/Animals-1.0.war
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./path/to/Dockerfile
+          push: true
+          tags: eliasvr/co_qa:latest  # Set your repository name here
 
   test:
     needs: build
