@@ -31,6 +31,9 @@ jobs:
           push: true
           tags: |
             eliasvr/co_qa:latest
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
