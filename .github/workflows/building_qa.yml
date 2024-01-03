@@ -25,10 +25,13 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Build Docker Image
-        run: docker build -t your-username/your-repo:latest .
+        run: docker build -t eliasvr/co_qa:latest .
+        # Add debugging info
+        - name: Show Docker Image
+          run: docker images
 
       - name: Login to DockerHub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "eliasvr" --password-stdin
 
       - name: Push Docker Image
         run: docker push eliasvr/co_qa:latest
