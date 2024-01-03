@@ -34,14 +34,14 @@ jobs:
          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Tag Docker Image
-        run: docker tag eliasvr/co_qa:latest eliasvr/co_qa:latest
+        run: docker tag eliasvr/co_qa eliasvr/co_qa
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Animal-1.0.war
           path: /home/runner/work/ci-cd-demo/ci-cd-demo/target/Animals-1.0.war
-          tags: eliasvr/co_qa:latest
+          tags: eliasvr/co_qa
 
   test:
     needs: build
