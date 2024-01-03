@@ -23,11 +23,11 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Build and Push Docker Image
+      - name: Build + Push Docker Image
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push eliasvr/co_qa
-
+          docker push eliasvr/co_dev_test
+          
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
